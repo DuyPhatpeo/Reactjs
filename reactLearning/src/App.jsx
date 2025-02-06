@@ -1,9 +1,12 @@
+import MyFooter from "./components/Footer"
+import MyHeader from "./components/Header"
+
 function App() {
   return (
     <div className="App">
-      <div>
-        Hello world
-      </div>
+      <MyHeader />
+      <div>Body</div>
+      <MyFooter/>
     </div>
   )
 }
