@@ -1,7 +1,7 @@
-function Hello({ name, content }) {
+function Hello({ name = "Thanh", content: message }) {
   return (
     <div>
-      {content} {name}
+      {message} {name}
     </div>
   );
 }
