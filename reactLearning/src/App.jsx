@@ -7,7 +7,7 @@ function App() {
     <>
       <Hello name="Phat" content="Xin chao" />
       <Hello name="Dung" content="Ni hao" />
-      <Hello name="Vu" content="Halo" />
+      <Hello name="Vu" content="Hello" />
       <Hello name="Nam" content="Chao xin" />
     </>
   );
