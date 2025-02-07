@@ -4,4 +4,4 @@ function MyFooter(){
         <div>Footer form components</div>
     )
 }
-export default MyFooter 
+export default MyFooter;

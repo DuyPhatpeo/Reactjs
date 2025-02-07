@@ -3,11 +3,11 @@ import MyHeader from "./components/Header"
 
 function App() {
   return (
-    <div className="App">
+    <>
       <MyHeader />
       <div>Body</div>
       <MyFooter/>
-    </div>
+    </>
   )
 }
 

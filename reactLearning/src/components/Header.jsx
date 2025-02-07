@@ -5,4 +5,4 @@ function MyHeader(){
     )
 }
 
-export default MyHeader
+export default MyHeader;
