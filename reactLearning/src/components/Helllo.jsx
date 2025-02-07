@@ -1,5 +1,4 @@
-function Hello(props) {
-  const { name, content } = props;
+function Hello({ name, content }) {
   return (
     <div>
       {content} {name}
