@@ -1,14 +1,11 @@
 import React from "react";
+import Happy from "./components/Happy";
+import NotHappy from "./components/NotHappy";
 
 function App() {
-  const content1 = <div>This is content 1</div>;
-  const content2 = <div>This is content 2</div>;
+  const isHappy = true;
 
-  const isDisplay1 = true;
-  if (isDisplay1) {
-    return content1;
-  }
-  return content2;
+  return <div>{isHappy ? <Happy /> : <NotHappy />}</div>;
 }
 
 export default App;
