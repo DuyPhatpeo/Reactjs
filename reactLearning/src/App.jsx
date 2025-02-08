@@ -1,11 +1,12 @@
 import React from "react";
-import Happy from "./components/Happy";
-import NotHappy from "./components/NotHappy";
+import Courses from "./components/Course";
 
 function App() {
-  const isHappy = true;
-
-  return <div>{isHappy ? <Happy /> : <NotHappy />}</div>;
+  return (
+    <>
+      <Courses />
+    </>
+  );
 }
 
 export default App;

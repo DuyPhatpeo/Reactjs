@@ -1,15 +1,27 @@
 export default function Courses() {
-  const courses = ["Javascrip", "HTML", "CSS"];
+  const courses = [
+    { name: "Javascript", price: "1000" },
+    { name: "HTML", price: "500" },
+    { name: "CSS", price: "200" },
+  ];
 
-  const renderUi = () => {
-    return (
+  return (
+    <div>
       <ul>
-        {courses.map((courses, index) => {
-          return <li key={index}>{courses}</li>;
+        {courses.map((course, index) => {
+          return (
+            <>
+              {course.price >= 500 ? (
+                <li key={index}>
+                  Name: {course.name}, Price: {course.price}
+                </li>
+              ) : (
+                ""
+              )}
+            </>
+          );
         })}
       </ul>
-    );
-  };
-
-  return renderUi();
+    </div>
+  );
 }
