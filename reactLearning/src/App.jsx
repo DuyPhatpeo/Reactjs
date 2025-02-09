@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(1);
+  const handleInitialState = () => {
+    return 1 + 1 + 1;
+  };
+
+  console.log(handleInitialState());
+
+  const [count, setCount] = useState(handleInitialState());
 
   const handleClick = () => {
     setCount((prev) => prev + 1);
-    setCount((prev) => prev + 1);
-    setCount((prev) => prev + 1);
   };
-
-  console.log("re-render");
 
   return (
     <>
