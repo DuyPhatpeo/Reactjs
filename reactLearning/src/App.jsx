@@ -9,6 +9,7 @@ function App() {
   return (
     <>
       <div>
+        <div>Username: {userName}</div>
         <input type="text" onChange={(e) => handleGetUsername(e)} />
       </div>
     </>
