@@ -1,10 +1,16 @@
-import React from "react";
-import Message from "./components/Message";
+import React, { useState } from "react";
 
 function App() {
+  const [count, setCount] = useState(1);
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+  console.log("re-render");
   return (
     <>
-      <Message />
+      <div>Sử dụng useState trong reactJS</div>
+      <div>Count: {count}</div>
+      <button onClick={handleClick}>Click me</button>
     </>
   );
 }
