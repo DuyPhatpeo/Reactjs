@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 
 function App() {
-  const handleInitialState = () => {
-    return 1 + 1 + 1;
-  };
-
-  console.log(handleInitialState());
-
-  const [count, setCount] = useState(handleInitialState());
+  const [count, setCount] = useState(() => {
+    const number = 1 + 1 + 1;
+    console.log(number);
+    return number;
+  });
 
   const handleClick = () => {
     setCount((prev) => prev + 1);
