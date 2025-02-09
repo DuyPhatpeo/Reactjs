@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 
 function App() {
-  // const colors = ["#FF0000", "#0000FF", "#FF00FF"];
-  // const [color, setColor] = useState("#FF0000");
-
-  // const handleChangeColor = (index) => {
-  //   console.log(index);
-  //   setColor(colors[index]);
-  // };
-  const [chosseProduct, setChosseProduct] = useState(1);
+  const [chooseProduct, setChooseProduct] = useState([]);
 
   const products = [
     { id: 1, name: "IPhone 13" },
@@ -17,37 +10,27 @@ function App() {
   ];
 
   const handleGetValueCheck = (id) => {
-    setChosseProduct(id);
+    if (!chooseProduct.includes(+id)) {
+      setChooseProduct((prev) => [...prev, +id]);
+    } else {
+      setChooseProduct((prev) => prev.filter((idProduct) => idProduct !== +id));
+    }
   };
-  console.log(chosseProduct);
+
+  console.log(chooseProduct);
 
   return (
     <>
-      {/* <div
-        style={{
-          background: color,
-          width: "70px",
-          height: "30px",
-          marginBottom: "10px",
-        }}
-      ></div>
-
-      <div>
-        <button onClick={() => handleChangeColor(0)}>Red</button>
-        <button onClick={() => handleChangeColor(1)}>Blue</button>
-        <button onClick={() => handleChangeColor(2)}>Pink</button>
-      </div> */}
-
       <div>
         {products.map((product, index) => {
           return (
             <div key={index}>
               <label>{product.name}</label>
               <input
-                type="radio"
+                type="checkbox"
                 value={product.id}
                 onChange={(e) => handleGetValueCheck(e.target.value)}
-                checked={+chosseProduct === product.id}
+                checked={chooseProduct.includes(product.id)}
               />
             </div>
           );
