@@ -1,10 +1,10 @@
 import React from "react";
-import Courses from "./components/Course";
+import Message from "./components/Message";
 
 function App() {
   return (
     <>
-      <Courses />
+      <Message />
     </>
   );
 }
