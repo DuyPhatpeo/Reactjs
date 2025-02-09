@@ -2,10 +2,15 @@ import React, { useState } from "react";
 
 function App() {
   const [count, setCount] = useState(1);
+
   const handleClick = () => {
-    setCount(count + 1);
+    setCount((prev) => prev + 1);
+    setCount((prev) => prev + 1);
+    setCount((prev) => prev + 1);
   };
+
   console.log("re-render");
+
   return (
     <>
       <div>Sử dụng useState trong reactJS</div>
